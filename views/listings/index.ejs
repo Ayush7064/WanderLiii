@@ -1,0 +1,121 @@
+<style>
+    .filter{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.75;
+    }
+    .filters{
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      position: sticky;
+      
+    }
+    .filter:hover{
+      opacity: 1;
+    }
+    .tax{
+      align-items: center !important;
+      border: 1px solid rgb(0, 0, 0,0.2) !important;
+      border-radius: 0.5rem;
+      height: 2.5rem;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.1s ease-in;
+    }
+    .tax:hover{
+      border: 1px solid rgb(0, 0, 0,0.5) !important;
+      background-color: #F7F7F7 !important;
+    }
+    .taxInfo{
+      display: none;
+    }
+</style>
+
+
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <div class="filters">
+      <div class="filter">
+        <i class="fa-solid fa-fire"></i>
+        <p>Trending</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-hospital"></i>
+        <p>Rooms</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-city"></i>
+        <p>Iconic cities</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-mountain-city"></i>
+        <p>Moutains</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-chess-rook"></i>
+        <p>Castles</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-water-ladder"></i>
+        <p>Amazing Pools</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-campground"></i>
+        <p>Camping</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-cow"></i>
+        <p>Farms</p>
+      </div>
+      <div class="filter">
+        <i class="fa-brands fa-galactic-republic"></i>
+        <p>Arctic</p>
+      </div>
+      <div class="tax">
+        <div class="form-check form-switch form-check-reverse ">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+          <label class="form-check-label" for="flexSwitchCheckReverse">Display total after texas</label>
+      </div>
+    </div>
+      
+      
+    </div>
+    <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1" >
+        <% for(listings of allListings){ %>
+            
+            <div class="card index-card col mx-0.5 mb-4" style="width: 19.5rem;">
+                <a href="/listings/<%= listings._id %>" id="anchor">
+                <img src="<%= listings.image.url %>" class="card-img-top" alt="..."  style="height: 19.5rem;">
+                <div class="card-img-overlay"></div>
+                <div class="card-body">
+                  <p class="card-text"><%= listings.title %></p>
+                  <p class="card-text">&#8377;<%= listings.price %>/night<i class="taxInfo">+ 18% taxes</i></p>
+                  
+                </a>
+                </div>
+              </div>
+           
+        <% } %>
+    </div>
+    <script>
+      let taxSwitch= document.getElementById("flexSwitchCheckReverse");
+        taxSwitch.addEventListener("click",()=>{
+            let taxInfo=document.getElementsByClassName("taxInfo");
+            for(let info of taxInfo){
+              if(info.style.display!="inline"){
+                info.style.display="inline";
+              }
+              else{
+                info.style.display="none";
+              }
+            }
+      })
+    </script>
+</body>
+</html>

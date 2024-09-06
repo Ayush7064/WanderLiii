@@ -1,0 +1,125 @@
+*{
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.navbar{
+    height: 80px !important;
+    background-color: white !important;
+    border-bottom: 1px solid rgba(0,0,0,0.15) !important;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3) !important;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+.details>ul,.logo>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:1.5rem;
+    list-style: none;
+}
+.index-card{
+    border: none !important;
+    
+}
+.card-img-top{
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0.95rem !important;
+}
+#anchor{
+    text-decoration: none;
+}
+.card-body{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.card-text{
+    margin: 0 !important;
+    color: black !important;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.1;
+    background-color: white;
+}
+.fa-regular{
+    color: rgb(255, 56, 92);
+    font-size: larger;
+}
+.airbnb{
+    color: rgb(255, 56, 92);
+    font-size: larger;
+    margin-left: 0.25rem;
+}
+.newbtn{
+    background-color: #ff385c !important;
+    color:white !important;
+    border: none !important;
+}
+.formbtn{
+    display: inline-flex !important;
+    gap :1rem !important;
+}
+#showedit{
+    background-color: #ff385c;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    color: white;
+    text-decoration: none !important;
+    font-weight: 400 !important;
+}
+#showimg{
+    border-radius: 1rem !important;
+}
+#title{
+    font-size: large;
+    font-weight: 500;
+}
+.edit-image{
+    border-radius: 0.5rem;
+    height: 200px;
+}
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 2rem;
+    }
+#navbar-nav{
+    position:  absolute !important;
+    right: 6%;
+
+}
+
+.search{
+    border-radius: 3rem !important;
+}
+.search-btn{
+    background-color:  #ff385c !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 3rem !important;
+
+}
+.div{
+    position: absolute ;
+    display: flex;
+    margin-left: 2rem;
+}
+.search-div{
+    position: absolute;
+    margin-left: 30rem;
+}
+.search-icon{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}

@@ -1,0 +1,43 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <%= success %>
+    <h2>Create a New Listing </h2>
+
+    <form action="/listings/new" method="post" class="mb-4 needs-validation" enctype="multipart/form-data" novalidate>
+        <div class="mb-3">
+            <label for="title" class="form-label">title: </label>
+            <input type="text" name="title" id="title" class="form-control" required/>
+            <div class="valid-feedback">
+                title looks good!
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">description: </label>
+            <textarea type="text" name="description" id="description" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Listing Image: </label>
+            <input type="file" name="image" id="image" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">price: </label>
+            <input type="number" name="price" id="price" class="form-control" required/>
+            <div class="invalid-feedback">
+                Enter valid price!
+              </div>
+        </div>
+        <div class="row mb-3">
+        <div class="mb-3 col-6">
+            <label for="location" class="form-label">location: </label>
+            <input type="text" name="location" id="location" class="form-control" required/>
+        </div>
+        <div class="mb-3 col-6">
+            <label for="country" class="form-label">country: </label>
+            <input type="text" name="country" id="country" class="form-control" required/>
+        </div>
+    </div>
+        <button type="submit" class="btn btn-primary newbtn">Create</button>
+      </form>
+      <script src="/style.js"></script>
+</body>
+</html>
