@@ -18,6 +18,7 @@ const LocalStrategy=require("passport-local");
 const User=require("./models/user.js");
 const userRoute=require("./routers/userRoute");
 const ExpressError=require("./utils/expresserror.js");
+const { render } = require('ejs');
 
 
 
@@ -77,7 +78,9 @@ app.get("/demouser",async(req,res)=>{
    let registeredUser= await User.register(fakeuser,"helloworld");
    res.send(registeredUser);
 });
-
+app.get("/",()=>{
+    render("/listings/index.ejs");
+})
 //listings route
 app.use("/listings",listingRoute);
 
