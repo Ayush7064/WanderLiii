@@ -1,4 +1,4 @@
-# **Wanderlii - ** 🏡✈️  
+# **Wanderliii - ** 🏡✈️  
 
 **Wanderlii** is a web application inspired by Airbnb, developed using the **MERN (MongoDB, Express.js, EJS, Node.js) stack**. This platform allows users to browse, search, and book accommodations with a **responsive and seamless experience** across all devices.  
 
