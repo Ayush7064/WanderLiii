@@ -44,7 +44,9 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-const urlDb= process.env.ATAS_DB;
+const urlDb= process.env.MONGO_URI;
+console.log("DB URI: ", urlDb);
+
 main().then(()=>{
         console.log("Connection is established");
     })
